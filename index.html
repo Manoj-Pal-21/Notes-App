@@ -25,8 +25,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-lg-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-lg-2 my-sm-0"  type="submit">Search</button>
             </form>
         </div>
     </nav>
@@ -38,31 +38,16 @@
             <div class="card-body">
                 <h5 class="card-title">Add a Note</h5>
                 <div class="form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="Type a note...."></textarea>
+                    <textarea class="form-control" id="addTxt" rows="3"
+                        placeholder="Type a note...." required="true"></textarea>
                 </div>
-                <button class="btn btn-primary">Add Note</button>
+                <button class="btn btn-primary" id="addNote">Add Note</button>
             </div>
         </div>
         <hr>
         <h2 class="text-center">Your Notes</h2>
         <hr>
-        <div id="card" class="row container-fluid">
-            <div class="card my-2 mx-2" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Note</h5>
-                    <p class="card-text"></p>
-                    <button class="btn btn-primary">Delete Note</button>
-                </div>
-            </div>
-            <div class="card my-2 mx-2" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Note</h5>
-                    <p class="card-text"></p>
-                    <button class="btn btn-primary">Delete Note</button>
-                </div>
-            </div>
-        </div>
+        <div id="notes" class="row container-fluid"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
